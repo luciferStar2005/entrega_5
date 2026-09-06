@@ -32,7 +32,12 @@ class ProductsFilter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      child: ListView.builder(itemCount: 100, itemBuilder: itemBuilder),
+      child: ListView.builder(
+        itemCount: 100,
+        itemBuilder: (context, index) {
+          return ListTile(title: Text('Product $index'));
+        },
+      ),
     );
   }
 }
